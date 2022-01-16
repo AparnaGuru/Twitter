@@ -1,5 +1,6 @@
 import { useState } from "react"
-import { Button } from "./Button"
+import { useSelector, useDispatch } from 'react-redux'
+import { setTweet } from './features/counter/TweetSlice'
 
 
 
@@ -10,6 +11,7 @@ export function TextBox(props)   {
     // function handleChange(event){
     //     setTweet(event.target.value);
     // }
+
     // return (
     //     <div>
     //     <textarea placeholder="Tweet something..." id="tweetTextBox" onChange={handleChange}></textarea>
@@ -17,13 +19,16 @@ export function TextBox(props)   {
     //     </div>
     // )
     //#####
+
+        const dispatch = useDispatch()
+
         function handleChange(event) {
-            props.functionTweet(event.target.value);
+            dispatch(setTweet(event.target.value));
         }
         
      return (
         <div>
-        <textarea placeholder="Tweet something..." id="tweetTextBox" onChange={handleChange}></textarea>
+        <textarea placeholder="Tweet something..." id="tweetTextBox" onChange ={handleChange}></textarea>
         </div>
      )
    

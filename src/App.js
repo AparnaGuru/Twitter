@@ -5,18 +5,34 @@ import { TextBox } from './TextBox';
 
 
 function App() {
-  const[tweet, setTweet] = useState("")
+
+  //#####
+  // const[tweet, setTweet] = useState("")
+  // return (
+  //   <div className="App">
+  //     <h1>Twitter!</h1>
+  //     <div>
+  //       <TextBox value={tweet} functionTweet={setTweet}/>
+  //     </div>
+  //     <div>
+  //       Hi my name is {tweet}
+  //     </div>
+  //     <div>
+  //       <Button name="Dummy" tweetVal={tweet}/>
+  //     </div>
+  //   </div>
+  // );
+  //#####
+
+
   return (
     <div className="App">
       <h1>Twitter!</h1>
       <div>
-        <TextBox value={tweet} functionTweet={setTweet}/>
+        <TextBox />
       </div>
       <div>
-        Hi my name is {tweet}
-      </div>
-      <div>
-        <Button name="Dummy" tweetVal={tweet}/>
+        <Button name="Tweet" />
       </div>
     </div>
   );
