@@ -1,6 +1,7 @@
 import {configureStore} from '@reduxjs/toolkit'
-import { tweetSlice } from '../features/counter/TweetSlice'
+import { createStore } from '@reduxjs/toolkit'
+import tweetReducer from '../features/counter/TweetSlice'
 
 export default configureStore({
-    reducer: {tweet: tweetSlice}
+    reducer: {tweet: tweetReducer}
   })

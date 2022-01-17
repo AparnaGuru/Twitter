@@ -1,18 +1,17 @@
 import { useState } from "react"
 import { useSelector } from "react-redux";
 import { TextBox } from "./TextBox";
-import { setTweet } from './features/counter/TweetSlice'
+import tweetSlice, { setTweet } from './features/counter/TweetSlice'
 import Store from './app/Store'
+import { createStore } from "@reduxjs/toolkit";
 
-export async function Button(props) {
-    //const [count, setCount] = useState(0);
-    const tweet1 = await Store.getState().tweet;    
+export function Button(props) {
+    //const [count, setCount] = useState(0); 
     
-    //const tweet2 = useSelector(state => state.tweet1.value )
 
     function callService() {
-        
-        alert("Hi")
+        const tweet1 = Store.getState().tweet.value;
+    
         
         //var tweetVal = <getValueFromTextBox />
 

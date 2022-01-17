@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useSelector, useDispatch } from 'react-redux'
-import { setTweet } from './features/counter/TweetSlice'
+import Store from "./app/Store"
 
 
 
@@ -23,7 +23,7 @@ export function TextBox(props)   {
         const dispatch = useDispatch()
 
         function handleChange(event) {
-            dispatch(setTweet(event.target.value));
+            Store.dispatch({type:"updated",payload:event.target.value})
         }
         
      return (
