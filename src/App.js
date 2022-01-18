@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import { Button } from './Button';
 import { TextBox } from './TextBox';
+import { Tweets } from './Tweets';
 
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
       </div>
       <div>
         <Button name="Tweet" />
+      </div>
+      <div>
+        <Tweets />
       </div>
     </div>
   );
