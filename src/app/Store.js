@@ -1,5 +1,4 @@
 import {configureStore} from '@reduxjs/toolkit'
-import { createStore } from '@reduxjs/toolkit'
 import tweetReducer from '../features/counter/TweetSlice'
 
 export default configureStore({
