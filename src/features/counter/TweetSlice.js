@@ -22,5 +22,4 @@ function tweetReducer(state = initialState, action) {
     // otherwise return the existing state unchanged
     return state
 }
-
 export default tweetReducer;

@@ -1,6 +1,4 @@
 import Store from './app/Store'
-import EventEmitter from 'EventEmitter'
-import { TextBox } from './TextBox'
 
 export function Button(props) {  
 
@@ -13,8 +11,6 @@ export function Button(props) {
             console.log("hi "+Store.getState().tweet.value)
             ClearTweet()
             console.log("hi "+Store.getState().tweet.value)
-            let x = new EventEmitter();
-            x.emit("cleared")
         }
     }
 
@@ -26,10 +22,10 @@ export function Button(props) {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                usename: 'Aparna',
                 tweet: tweet1
             })
         });
+        ClearTweet()
     }
 
     function ClearTweet() {

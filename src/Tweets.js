@@ -16,7 +16,6 @@ export function Tweets() {
                 'Content-Type': 'application/json'
             }
         }))
-        //).then(response => response.json()).then(responseJSON => setTweet(JSON.stringify(responseJSON))).catch(err => console.log(err))
         .then(response => response.json()).then(resp => setTweet(resp)).catch(err => console.log(err))
 
     }

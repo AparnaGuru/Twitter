@@ -1,28 +1,23 @@
 import { useState } from 'react';
 import './App.css';
 import Store from './app/Store';
-import { Button } from './Button';
-import { TextBox } from './TextBox';
-import { Tweets } from './Tweets';
+
+import { Login } from './Login';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { LandingPage } from './LandingPage'
 
 
 function App() {
   return (
-    <div className="App">
-      <h1>Twitter!</h1>
-      <div>
-        <TextBox value1={Store.getState().tweet.value}/>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route exact path='/' element={< Login />}></Route>
+          <Route exact path='/Landing' element={< LandingPage />}></Route>
+        </Routes>
       </div>
-      <div>
-        <Button name="Tweet" />
-      </div>
-      <div>
-        <Button name="Clear" />
-      </div>
-      <div>
-        <Tweets />
-      </div>
-    </div>
+    </Router>
+
   );
 }
 export default App;
