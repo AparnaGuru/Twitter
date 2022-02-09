@@ -1,4 +1,4 @@
-const initialState = { type: "", isAuth: false , token: "" }
+const initialState = { type: "", isAuth: false , token: "", userName: "" }
 
 function AuthenticatorReducer(state = initialState, action) {
     if (action.type === 'updated') {
@@ -7,7 +7,8 @@ function AuthenticatorReducer(state = initialState, action) {
             ...state,
             // and update the copy with the new value
             isAuth: action.payload,
-            token: action.tokenVal
+            token: action.tokenVal,
+            userName: action.un
         }
     }
     // otherwise return the existing state unchanged

@@ -22,7 +22,7 @@ export function Tweets() {
     return (
         tweets1.map(singletweet =>(
             <div  key={singletweet._id}>
-                {singletweet.tweet}                    
+                {singletweet.tweetValues.tweet}                    
             </div>
         )))
 }
