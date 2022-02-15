@@ -1,8 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Store from "./app/Store";
 
-
-
 export function Login() {
     const navigate = useNavigate();
     var errorVar = false;
