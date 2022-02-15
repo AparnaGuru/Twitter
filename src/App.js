@@ -2,10 +2,10 @@ import { useState } from 'react';
 import './App.css';
 import Store from './app/Store';
 
-import { Login } from './Login';
-import { SignUp } from './SignUp';
+import { Login } from './Components/Login';
+import { SignUp } from './Components/SignUp';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { LandingPage } from './LandingPage'
+import { LandingPage } from './Components/LandingPage'
 
 
 function App() {
